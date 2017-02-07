@@ -7,28 +7,31 @@
 
 {
     "name": "Account balance reporting engine",
-    "version": "8.0.1.0.0",
+    "version": "8.0.1.2.0",
     "author": "Pexego, "
-              "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
               "AvanzOSC, "
+              "Tecnativa, "
               "Odoo Community Association (OCA)",
     "website": "http://www.pexego.es",
     "category": "Accounting & Finance",
     "contributors": [
         "Juanjo Algaz <juanjoa@malagatic.com>",
         "Joaquín Gutierrez <joaquing.pedrosa@gmail.com>",
-        "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
+        "Pedro M. Baeza <pedro.baeza@tecnativa.com>",
         "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
     ],
+    "license": 'AGPL-3',
     "depends": [
         "account",
     ],
     "data": [
         "security/ir.model.access.csv",
+        "views/account_account_view.xml",
         "views/account_balance_reporting_template_view.xml",
         "views/account_balance_reporting_report_view.xml",
         "views/account_balance_reporting_menu.xml",
         "report/account_balance_reporting_reports.xml",
+        "report/report_generic.xml",
         "wizard/wizard_print_view.xml",
     ],
     "installable": True,

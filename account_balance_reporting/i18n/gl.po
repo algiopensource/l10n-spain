@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l10n-spain (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-27 00:50+0000\n"
-"PO-Revision-Date: 2016-04-26 10:46+0000\n"
+"POT-Creation-Date: 2016-11-13 10:44+0000\n"
+"PO-Revision-Date: 2016-11-25 14:58+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Galician (http://www.transifex.com/oca/OCA-l10n-spain-8-0/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: account_balance_reporting
+#: model:ir.model,name:account_balance_reporting.model_account_account
+msgid "Account"
+msgstr ""
 
 #. module: account_balance_reporting
 #: view:account.balance.reporting:account_balance_reporting.view_account_balance_reporting_form
@@ -79,14 +84,12 @@ msgid "Balance mode"
 msgstr "Modo de saldo"
 
 #. module: account_balance_reporting
-#: report:report_account_balance_reporting.generic:0
-#: report:report_account_balance_reporting.generic_non_zero:0
+#: view:website:account_balance_reporting.report_generic
 msgid "CODE"
 msgstr "CÓDIGO"
 
 #. module: account_balance_reporting
-#: report:report_account_balance_reporting.generic:0
-#: report:report_account_balance_reporting.generic_non_zero:0
+#: view:website:account_balance_reporting.report_generic
 msgid "CONCEPT"
 msgstr "CONCEPTO"
 
@@ -95,6 +98,11 @@ msgstr "CONCEPTO"
 #: field:account.balance.reporting.template.line,css_class:0
 msgid "CSS Class"
 msgstr "Clase CSS"
+
+#. module: account_balance_reporting
+#: view:website:account_balance_reporting.report_generic
+msgid "CURRENT"
+msgstr ""
 
 #. module: account_balance_reporting
 #: view:account.balance.reporting:account_balance_reporting.view_account_balance_reporting_form
@@ -189,6 +197,11 @@ msgid "Credit-Debit, reversed with brackets"
 msgstr "Haber-Debe, ó contrario entre parenteses"
 
 #. module: account_balance_reporting
+#: field:account.balance.reporting.line,current_move_line_count:0
+msgid "Current move line count"
+msgstr ""
+
+#. module: account_balance_reporting
 #: field:account.balance.reporting,current_date_from:0
 #: field:account.balance.reporting,previous_date_from:0
 msgid "Date From"
@@ -231,6 +244,19 @@ msgstr "Descrición"
 #: field:account.balance.reporting.print.wizard,report_xml_id:0
 msgid "Design"
 msgstr "Deseño"
+
+#. module: account_balance_reporting
+#: field:account.balance.reporting,display_name:0
+#: field:account.balance.reporting.print.wizard,display_name:0
+#: field:account.balance.reporting.template,display_name:0
+#: field:account.balance.reporting.template.line,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: account_balance_reporting
+#: field:account.account,not_level_expand:0
+msgid "Don't show this account on financial reports level detail"
+msgstr ""
 
 #. module: account_balance_reporting
 #: selection:account.balance.reporting,state:0
@@ -318,6 +344,15 @@ msgid "ID"
 msgstr "ID"
 
 #. module: account_balance_reporting
+#: help:account.account,not_level_expand:0
+msgid ""
+"If you mark this field, when expanding account balances by levels on "
+"financial reports, this account won't be shown. This only serves when "
+"displaying the account itself, but not when showing parent accounts, which "
+"will include this account balance as part of the result."
+msgstr ""
+
+#. module: account_balance_reporting
 #: view:account.balance.reporting.template:account_balance_reporting.view_account_balance_reporting_template_form
 msgid "Information"
 msgstr "Información"
@@ -331,7 +366,7 @@ msgid ""
 msgstr ""
 
 #. module: account_balance_reporting
-#: code:addons/account_balance_reporting/models/account_balance_reporting_report.py:522
+#: code:addons/account_balance_reporting/models/account_balance_reporting_report.py:528
 #, python-format
 msgid "Journal Items"
 msgstr ""
@@ -345,6 +380,15 @@ msgstr ""
 #: field:account.balance.reporting.line,previous_move_line_ids:0
 msgid "Journal items (previous)"
 msgstr ""
+
+#. module: account_balance_reporting
+#: field:account.balance.reporting,__last_update:0
+#: field:account.balance.reporting.line,__last_update:0
+#: field:account.balance.reporting.print.wizard,__last_update:0
+#: field:account.balance.reporting.template,__last_update:0
+#: field:account.balance.reporting.template.line,__last_update:0
+msgid "Last Modified on"
+msgstr "Modificado por última vez o"
 
 #. module: account_balance_reporting
 #: field:account.balance.reporting,write_uid:0
@@ -417,8 +461,7 @@ msgid "Lines will be sorted/grouped by this field"
 msgstr "As liñas serán ordenadas/agrupadas por este campo"
 
 #. module: account_balance_reporting
-#: report:report_account_balance_reporting.generic:0
-#: report:report_account_balance_reporting.generic_non_zero:0
+#: view:website:account_balance_reporting.report_generic
 msgid "NOTES"
 msgstr "NOTAS"
 
@@ -447,6 +490,11 @@ msgid "Notes"
 msgstr "Anotacións"
 
 #. module: account_balance_reporting
+#: view:website:account_balance_reporting.report_generic
+msgid "PREVIOUS"
+msgstr ""
+
+#. module: account_balance_reporting
 #: field:account.balance.reporting.line,parent_id:0
 #: field:account.balance.reporting.template.line,parent_id:0
 msgid "Parent"
@@ -456,6 +504,11 @@ msgstr "Pai"
 #: selection:account.balance.reporting,check_filter:0
 msgid "Periods"
 msgstr "Períodos"
+
+#. module: account_balance_reporting
+#: field:account.balance.reporting.line,previous_move_line_count:0
+msgid "Previous move line count"
+msgstr ""
 
 #. module: account_balance_reporting
 #: view:account.balance.reporting.print.wizard:account_balance_reporting.wizard_account_balance_reporting_print
@@ -534,7 +587,7 @@ msgstr "Liñas do modelo"
 #. module: account_balance_reporting
 #: sql_constraint:account.balance.reporting.line:0
 #: sql_constraint:account.balance.reporting.template.line:0
-#: code:addons/account_balance_reporting/models/account_balance_reporting_report.py:187
+#: code:addons/account_balance_reporting/models/account_balance_reporting_report.py:189
 #: code:addons/account_balance_reporting/models/account_balance_reporting_template.py:150
 #, python-format
 msgid "The code must be unique for this report!"
@@ -564,3 +617,15 @@ msgid ""
 "      values.\n"
 "    "
 msgstr "Fórmula de cálculo do valor: O valor final é calculado segundo o seguinte:\nValor de modelo vacío: suma dos valores dos fillos (deste concepto).\nNúmero con coma decimal (\"10.2\"): este valor (constante) .\nNúmeros de contas separadas por comas (\"430431, (437)\"): Suma dos saldos das contas (o signo do balance depende do modo de balance).\nCódigos de concepto separados por \"+\" (\"11000+12000\"): Suma dos valores dos conceptos."
+
+#. module: account_balance_reporting
+#: view:website:account_balance_reporting.report_generic_non_zero
+msgid "account_balance_reporting.report_generic_non_zero"
+msgstr ""
+
+#. module: account_balance_reporting
+#: view:website:account_balance_reporting.report_generic_non_zero
+msgid ""
+"o.line_ids.filtered(lambda x: x.current_value != 0.0 or x.previous_value != "
+"0.0)"
+msgstr ""

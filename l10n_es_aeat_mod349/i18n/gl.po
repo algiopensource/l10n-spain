@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l10n-spain (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-05 10:32+0000\n"
-"PO-Revision-Date: 2016-03-05 10:34+0000\n"
+"POT-Creation-Date: 2016-11-13 10:45+0000\n"
+"PO-Revision-Date: 2016-11-25 14:58+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Galician (http://www.transifex.com/oca/OCA-l10n-spain-8-0/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -121,29 +121,44 @@ msgid "Account entry"
 msgstr ""
 
 #. module: l10n_es_aeat_mod349
-#: code:addons/l10n_es_aeat_mod349/models/mod349.py:172
-#: code:addons/l10n_es_aeat_mod349/models/mod349.py:181
+#: code:addons/l10n_es_aeat_mod349/models/mod349.py:198
+#: code:addons/l10n_es_aeat_mod349/models/mod349.py:207
 #, python-format
 msgid "All amounts must be positives"
 msgstr "Tódolos importes deben ser positivos."
 
 #. module: l10n_es_aeat_mod349
-#: code:addons/l10n_es_aeat_mod349/models/mod349.py:168
+#: code:addons/l10n_es_aeat_mod349/models/mod349.py:194
 #, python-format
 msgid "All partner records fields (country, VAT number) must be filled."
 msgstr "Tódolos campos dos rexistros (país, NIF) deben estar cubertos."
 
 #. module: l10n_es_aeat_mod349
-#: code:addons/l10n_es_aeat_mod349/models/mod349.py:176
+#: code:addons/l10n_es_aeat_mod349/models/mod349.py:202
 #, python-format
 msgid "All partner refunds fields (country, VAT number) must be filled."
 msgstr "Tódolos campos das facturas rectificativas (país, NIF) deben estar cubertos."
+
+#. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.report,allow_posting:0
+msgid "Allow posting"
+msgstr ""
 
 #. module: l10n_es_aeat_mod349
 #: field:l10n.es.aeat.mod349.partner_record_detail,amount_untaxed:0
 #: field:l10n.es.aeat.mod349.partner_refund_detail,amount_untaxed:0
 msgid "Amount untaxed"
 msgstr "Importe sen impostos"
+
+#. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.report,partner_bank_id:0
+msgid "Bank account"
+msgstr "Conta bancaria"
+
+#. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.report,calculate_date:0
+msgid "Calculate by days"
+msgstr ""
 
 #. module: l10n_es_aeat_mod349
 #: field:l10n.es.aeat.mod349.report,calculation_date:0
@@ -156,9 +171,24 @@ msgid "Cancelled"
 msgstr "Cancelada"
 
 #. module: l10n_es_aeat_mod349
+#: help:l10n.es.aeat.mod349.partner_record,partner_record_ok:0
+msgid "Checked if partner record is OK"
+msgstr ""
+
+#. module: l10n_es_aeat_mod349
+#: help:l10n.es.aeat.mod349.partner_refund,partner_refund_ok:0
+msgid "Checked if refund record is OK"
+msgstr ""
+
+#. module: l10n_es_aeat_mod349
 #: field:l10n.es.aeat.mod349.report,company_id:0
 msgid "Company"
 msgstr "Compañía"
+
+#. module: l10n_es_aeat_mod349
+#: help:l10n.es.aeat.mod349.report,partner_bank_id:0
+msgid "Company bank account used for the presentation"
+msgstr ""
 
 #. module: l10n_es_aeat_mod349
 #: selection:l10n.es.aeat.mod349.report,type:0
@@ -166,7 +196,7 @@ msgid "Complementary"
 msgstr "Complementaria"
 
 #. module: l10n_es_aeat_mod349
-#: code:addons/l10n_es_aeat_mod349/models/mod349.py:191
+#: code:addons/l10n_es_aeat_mod349/models/mod349.py:217
 #, python-format
 msgid "Contact name (Full name) must have name and surname"
 msgstr "O nome do contacto (Nome completo) debe conter nome e apelidos"
@@ -214,6 +244,12 @@ msgid "DVD"
 msgstr "DVD"
 
 #. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.partner_record_detail,date:0
+#: field:l10n.es.aeat.mod349.partner_refund_detail,date:0
+msgid "Date"
+msgstr "Data"
+
+#. module: l10n_es_aeat_mod349
 #: view:l10n.es.aeat.mod349.report:l10n_es_aeat_mod349.view_l10n_es_aeat_mod349_report_form
 msgid "Declaración"
 msgstr "Declaración"
@@ -232,6 +268,16 @@ msgstr "Líneas de detalle"
 #: view:l10n.es.aeat.mod349.partner_refund:l10n_es_aeat_mod349.view_l10n_ES_aeat_mod349_partner_refund_form
 msgid "Details"
 msgstr "Detalles"
+
+#. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.export_to_boe,display_name:0
+#: field:l10n.es.aeat.mod349.partner_record,display_name:0
+#: field:l10n.es.aeat.mod349.partner_record_detail,display_name:0
+#: field:l10n.es.aeat.mod349.partner_refund,display_name:0
+#: field:l10n.es.aeat.mod349.partner_refund_detail,display_name:0
+#: field:l10n.es.aeat.mod349.report,display_name:0
+msgid "Display Name"
+msgstr ""
 
 #. module: l10n_es_aeat_mod349
 #: selection:l10n.es.aeat.mod349.report,state:0
@@ -365,9 +411,25 @@ msgid "Journal in which post the move."
 msgstr ""
 
 #. module: l10n_es_aeat_mod349
+#: help:l10n.es.aeat.mod349.partner_record_detail,date:0
+#: help:l10n.es.aeat.mod349.partner_refund_detail,date:0
+msgid "Keep empty to use the current date"
+msgstr "Deixe baleiro para usa-la data actual"
+
+#. module: l10n_es_aeat_mod349
 #: field:l10n.es.aeat.mod349.report,representative_vat:0
 msgid "L.R. VAT number"
 msgstr "NIF repr. legal"
+
+#. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.export_to_boe,__last_update:0
+#: field:l10n.es.aeat.mod349.partner_record,__last_update:0
+#: field:l10n.es.aeat.mod349.partner_record_detail,__last_update:0
+#: field:l10n.es.aeat.mod349.partner_refund,__last_update:0
+#: field:l10n.es.aeat.mod349.partner_refund_detail,__last_update:0
+#: field:l10n.es.aeat.mod349.report,__last_update:0
+msgid "Last Modified on"
+msgstr "Modificado por última vez o"
 
 #. module: l10n_es_aeat_mod349
 #: field:l10n.es.aeat.mod349.export_to_boe,write_uid:0
@@ -400,6 +462,11 @@ msgstr "NIF do representante legal."
 #: selection:l10n.es.aeat.mod349.partner_refund,operation_key:0
 msgid "M - Intra-Community supplies without taxes"
 msgstr "M - Entregas intracomunitarias sen impostos "
+
+#. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.report,model:0
+msgid "Model"
+msgstr ""
 
 #. module: l10n_es_aeat_mod349
 #: help:l10n.es.aeat.mod349.report,contact_name:0
@@ -476,6 +543,11 @@ msgid "Partner"
 msgstr "Empresa"
 
 #. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.partner_record,partner_record_ok:0
+msgid "Partner Record OK"
+msgstr ""
+
+#. module: l10n_es_aeat_mod349
 #: field:l10n.es.aeat.mod349.partner_record_detail,partner_record_id:0
 msgid "Partner record"
 msgstr "Rexistro da empresa"
@@ -502,9 +574,34 @@ msgid "Partner refund IDS"
 msgstr "IDs de facturas rectificativas"
 
 #. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.partner_refund,partner_refund_ok:0
+msgid "Partner refund OK"
+msgstr ""
+
+#. module: l10n_es_aeat_mod349
 #: field:l10n.es.aeat.mod349.partner_refund,refund_detail_ids:0
 msgid "Partner refund detail IDS"
 msgstr "IDs Detalles das facturas rectificativas"
+
+#. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.report,total_partner_records:0
+msgid "Partners records"
+msgstr ""
+
+#. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.report,total_partner_records_amount:0
+msgid "Partners records amount"
+msgstr ""
+
+#. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.report,total_partner_refunds:0
+msgid "Partners refunds"
+msgstr ""
+
+#. module: l10n_es_aeat_mod349
+#: field:l10n.es.aeat.mod349.report,total_partner_refunds_amount:0
+msgid "Partners refunds amount"
+msgstr ""
 
 #. module: l10n_es_aeat_mod349
 #: report:report_l10n_es_aeat_mod349.report:0
@@ -621,7 +718,7 @@ msgstr "O tipo de rexistro 1 debe ter 502 caracteres de longo"
 
 #. module: l10n_es_aeat_mod349
 #: code:addons/l10n_es_aeat_mod349/wizard/export_mod349_to_boe.py:184
-#: code:addons/l10n_es_aeat_mod349/wizard/export_mod349_to_boe.py:245
+#: code:addons/l10n_es_aeat_mod349/wizard/export_mod349_to_boe.py:247
 #, python-format
 msgid "The type 2 record must be 502 characters long"
 msgstr "O tipo de rexistro 2 debe ter 502 caracteres de longo"
@@ -655,6 +752,14 @@ msgstr "IVE"
 #: field:l10n.es.aeat.mod349.report,company_vat:0
 msgid "VAT number"
 msgstr "NIF"
+
+#. module: l10n_es_aeat_mod349
+#: help:l10n.es.aeat.mod349.report,calculate_date:0
+msgid ""
+"Warning!: With this checkbox selected, the declaration will be computed "
+"selecting invoices based in periods and dates in selected Period Type not "
+"only by period"
+msgstr ""
 
 #. module: l10n_es_aeat_mod349
 #: report:report_l10n_es_aeat_mod349.report:0
