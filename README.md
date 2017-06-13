@@ -41,7 +41,7 @@ addon | version | summary
 [l10n_es_aeat_mod111](l10n_es_aeat_mod111/) | 8.0.2.1.0 | AEAT modelo 111
 [l10n_es_aeat_mod115](l10n_es_aeat_mod115/) | 8.0.1.3.0 | AEAT modelo 115
 [l10n_es_aeat_mod130](l10n_es_aeat_mod130/) | 8.0.0.9.0 | AEAT modelo 130
-[l10n_es_aeat_mod216](l10n_es_aeat_mod216/) | 8.0.1.3.0 | AEAT modelo 216
+[l10n_es_aeat_mod216](l10n_es_aeat_mod216/) | 8.0.1.3.1 | AEAT modelo 216
 [l10n_es_aeat_mod296](l10n_es_aeat_mod296/) | 8.0.1.3.0 | AEAT modelo 296
 [l10n_es_aeat_mod303](l10n_es_aeat_mod303/) | 8.0.1.10.0 | AEAT modelo 303
 [l10n_es_aeat_mod340](l10n_es_aeat_mod340/) | 8.0.2.5.1 | Generación de fichero modelo 340 y libro de IVA
@@ -54,7 +54,7 @@ addon | version | summary
 [l10n_es_cnae](l10n_es_cnae/) | 8.0.1.0.0 | Extiende los códigos NACE europeos con los CNAE españoles
 [l10n_es_crm_lead_trade_name](l10n_es_crm_lead_trade_name/) | 8.0.1.0.0 | Add trade name field to leads
 [l10n_es_dua](l10n_es_dua/) | 8.0.1.0.0 | Importaciones con DUA
-[l10n_es_fiscal_year_closing](l10n_es_fiscal_year_closing/) | 8.0.1.0.0 | Cierre de ejercicio fiscal para España
+[l10n_es_fiscal_year_closing](l10n_es_fiscal_year_closing/) | 8.0.2.0.0 | Cierre de ejercicio fiscal para España
 [l10n_es_irnr](l10n_es_irnr/) | 8.0.1.0.0 | Retenciones IRNR (No residentes)
 [l10n_es_location_nuts](l10n_es_location_nuts/) | 8.0.1.0.0 | NUTS specific options for Spain
 [l10n_es_partner](l10n_es_partner/) | 8.0.1.5.2 | Adaptación de los clientes, proveedores y bancos para España
