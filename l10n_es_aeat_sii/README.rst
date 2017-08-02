@@ -7,7 +7,7 @@ Suministro Inmediato de Información en el IVA
 =============================================
 
 Módulo para la presentación inmediata del IVA
-http://www.agenciatributaria.es/static_files/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Modelos_y_formularios/Suministro_inmediato_informacion/FicherosSuministros/V_05/SII_Descripcion_ServicioWeb_v0.5_es_es.pdf
+http://www.agenciatributaria.es/static_files/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Modelos_y_formularios/Suministro_inmediato_informacion/V_1_0/SII_Descripcion_ServicioWeb_es_es.pdf
 
 Installation
 ============
@@ -81,7 +81,6 @@ Known issues / Roadmap
 * Asistente para consultar los documentos comunicados.
 * Libro de bienes de inversión (Libro anual se crea un módulo aparte).
 * Regímenes especiales de seguros y de agencias de viaje.
-* Imputar los importes en € cuando la factura está en otra divisa.
 * Comunicación de las facturas del primer semestre.
 
 Bug Tracker
@@ -110,6 +109,7 @@ Contributors
 * Jordi Tolsà <jordi@studio73.es>
 * Ismael Calvo <ismael.calvo@factorlibre.es>
 * Omar Castiñeira - Comunitea S.L. <omar@comunitea.com>
+* Juanjo Algaz <jalgaz@gmail.com>
 * Pedro M. Baeza <pedro.baeza@tecnativa.com>
 
 Maintainer
