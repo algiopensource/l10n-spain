@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l10n-spain (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-29 00:59+0000\n"
-"PO-Revision-Date: 2017-08-21 07:26+0000\n"
+"POT-Creation-Date: 2017-10-27 00:55+0000\n"
+"PO-Revision-Date: 2017-10-23 10:55+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-l10n-spain-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -371,7 +371,7 @@ msgstr ""
 #. module: l10n_es_aeat
 #: field:aeat.model.export.config.line,expression:0
 msgid "Expression"
-msgstr ""
+msgstr "Izraz"
 
 #. module: l10n_es_aeat
 #: code:addons/l10n_es_aeat/models/aeat_export_configuration.py:106
@@ -398,7 +398,7 @@ msgstr ""
 #. module: l10n_es_aeat
 #: field:l10n.es.aeat.report.export_to_boe,data:0
 msgid "File"
-msgstr ""
+msgstr "Datoteka"
 
 #. module: l10n_es_aeat
 #: field:l10n.es.aeat.report.export_to_boe,name:0
