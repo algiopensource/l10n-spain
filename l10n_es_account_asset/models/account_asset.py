@@ -77,9 +77,9 @@ class AccountAssetAsset(models.Model):
          'Wrong percentage!'),
     ]
 
-    @api.multi
-    def onchange_category_id(self, category_id):
-        res = super(AccountAssetAsset, self).onchange_category_id(category_id)
+    def onchange_category_id_values(self, category_id):
+        res = super(AccountAssetAsset, self).\
+            onchange_category_id_values(category_id)
         if category_id:
             category_obj = self.env['account.asset.category']
             category = category_obj.browse(category_id)
@@ -143,12 +143,10 @@ class AccountAssetAsset(models.Model):
               sequence != undone_dotation_number):
             # Caso especial de cálculo que cambia
             # Debemos considerar también las cantidades ya depreciadas
-            depreciated_amount = 0
-            depr_lin_obj = self.env['account.asset.depreciation.line']
-            for line in depr_lin_obj.browse(posted_depreciation_line_ids):
-                depreciated_amount += line.amount
-            amount = (amount_to_depr + depreciated_amount) \
-                / self.method_number
+            depreciated_amount = sum(
+                posted_depreciation_line_ids.mapped('amount')
+            )
+            amount = (amount_to_depr + depreciated_amount) / self.method_number
             if sequence == 1:
                 if self.method_period == 1:
                         total_days = calendar.monthrange(

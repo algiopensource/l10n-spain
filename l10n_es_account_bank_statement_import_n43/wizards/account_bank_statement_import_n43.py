@@ -65,7 +65,7 @@ class AccountBankStatementImport(models.TransientModel):
             'concepto_c': line[22:24],
             'concepto_p': line[24:27],
             'importe': (float(line[28:40]) + (float(line[40:42]) / 100)),
-            'num_documento': line[41:52],
+            'num_documento': line[42:52],
             'referencia1': line[52:64].strip(),
             'referencia2': line[64:].strip(),
             'conceptos': {},
@@ -306,7 +306,9 @@ class AccountBankStatementImport(models.TransientModel):
                         x.strip() for x in line['conceptos'][concept_line]
                         if x.strip())
                 vals_line = {
-                    'date': fields.Date.to_string(line[journal.n43_date_type]),
+                    'date': fields.Date.to_string(
+                        line[journal.n43_date_type or 'fecha_valor']
+                    ),
                     'name': ' '.join(conceptos),
                     'ref': self._get_ref(line),
                     'amount': line['importe'],

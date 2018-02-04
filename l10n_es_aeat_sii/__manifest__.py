@@ -11,7 +11,7 @@
 
 {
     "name": "Suministro Inmediato de Información en el IVA",
-    "version": "9.0.1.8.0",
+    "version": "10.0.2.0.1",
     "category": "Accounting & Finance",
     "website": "https://odoospain.odoo.com",
     "author": "Acysos S.L.,"
@@ -25,7 +25,7 @@
               "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
-    "installable": False,
+    "installable": True,
     "external_dependencies": {
         "python": [
             "zeep",
@@ -36,8 +36,7 @@
     "depends": [
         "account_invoice_refund_link",
         "l10n_es_aeat",
-        "connector",
-        "account_invoice_currency",
+        "queue_job",
     ],
     "data": [
         "data/ir_config_parameter.xml",
@@ -46,6 +45,7 @@
         "views/aeat_sii_view.xml",
         "wizards/aeat_sii_password_view.xml",
         "wizards/account_invoice_refund_views.xml",
+        "wizards/send_first_semester.xml",
         "views/aeat_sii_mapping_registration_keys_view.xml",
         "data/aeat_sii_mapping_registration_keys_data.xml",
         "views/aeat_sii_map_view.xml",
