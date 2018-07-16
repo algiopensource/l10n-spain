@@ -3,6 +3,7 @@
 #                Daniel Rodriguez Lijo <drl.9319@gmail.com>
 # Copyright 2017 Eficent Business and IT Consulting Services, S.L.
 #                <contact@eficent.com>
+# Copyright 2018 Luis M. Ontalba <luismaront@gmail.com>
 # License AGPL-3 - See https://www.gnu.org/licenses/agpl-3.0
 import datetime
 
@@ -39,7 +40,7 @@ class L10nEsVatBook(models.Model):
         comodel_name='l10n.es.vat.book.line',
         inverse_name='vat_book_id',
         domain=[('line_type', '=', 'rectification_issued')],
-        string='Issued Rectification invoices',
+        string='Issued Refund Invoices',
         copy=False,
         readonly="True")
 
@@ -55,7 +56,7 @@ class L10nEsVatBook(models.Model):
         comodel_name='l10n.es.vat.book.line',
         inverse_name='vat_book_id',
         domain=[('line_type', '=', 'rectification_received')],
-        string='Received Rectification invoices',
+        string='Received Refund Invoices',
         copy=False,
         readonly="True")
 
@@ -171,9 +172,9 @@ class L10nEsVatBook(models.Model):
             Returns:
                 dictionary: Vals from the new record.
         """
-        invoice = min(move.line_ids.mapped('invoice_id'))
         ref = move.ref
         ext_ref = ''
+        invoice = move.line_ids.mapped('invoice_id')[:1]
         if invoice:
             ref = invoice.number
             ext_ref = invoice.reference
@@ -194,8 +195,16 @@ class L10nEsVatBook(models.Model):
             lambda l: any(t == tax for t in l.tax_ids))
         base_amount_untaxed = sum(x.credit - x.debit for x in base_move_lines)
 
+        parent_tax = self.env['account.tax'].search([
+            ('children_tax_ids.id', '=', tax.id)], limit=1)
+        taxes = self.env['account.tax']
+        if parent_tax:
+            taxes = tax.children_tax_ids
+            tax = parent_tax
+        else:
+            taxes += tax
         fee_move_lines = move.line_ids.filtered(
-            lambda l: l.tax_line_id == tax)
+            lambda l: l.tax_line_id in taxes)
         fee_amount_untaxed = 0.0
         if fee_move_lines:
             fee_amount_untaxed = sum(
@@ -248,7 +257,7 @@ class L10nEsVatBook(models.Model):
         exception = False
         if vals['invoice_id'] and not vals['vat_number']:
             exception = True
-            exception_text += _("¡The partner haven't VAT!")
+            exception_text += _("The partner doesn't have a VAT number")
 
         if exception:
             vals.update({
@@ -420,3 +429,17 @@ class L10nEsVatBook(models.Model):
         date_format = lang.date_format
         return datetime.datetime.strftime(
             fields.Date.from_string(date), date_format)
+
+    @api.multi
+    def export_xlsx(self):
+        self.ensure_one()
+        context = dict(self.env.context, active_ids=self.ids)
+        return {
+            'name': 'VAT book XLSX report',
+            'model': 'l10n.es.vat.book',
+            'type': 'ir.actions.report.xml',
+            'report_name': 'l10n_es_vat_book.l10n_es_vat_book_xlsx',
+            'report_type': 'xlsx',
+            'report_file': 'l10n.es.vat.book',
+            'context': context,
+        }
